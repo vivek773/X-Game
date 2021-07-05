@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="styleS15B.css">
+</head>
+<body>
+  <div>
+    <div class="header">
+  <h1>Collect X</h1>
+  <h3>Collect as many X as you can in 10 seconds</h3>
+</div>
+    <div id="time" class="right">
+         Time:0
+     </div>
+     <div class="clr"></div>
+     <div class="left">
+         <button onclick="myVar = setInterval(stopWatch, 1000)">start</button>
+     </div>
+      <div id="score" class="right">
+         Score:0
+     </div>
+  <div class="clr"></div>
+  <div class="row">
+  <button id="demo0"  onclick="score1()" class="column">o</button>
+  <button id="demo1"  onclick="score1()" class="column">o</button>
+  <button id="demo2"  onclick="score1()" class="column">o</button>
+  <button id="demo3"  onclick="score1()" class="column">o</button>
+  <button id="demo4"  onclick="score1()" class="column">o</button>
+  <button id="demo5"  onclick="score1()" class="column">o</button>
+  <button id="demo6"  onclick="score1()" class="column">o</button>
+  <button id="demo7"  onclick="score1()" class="column">o</button>
+  <button id="demo8"  onclick="score1()" class="column">o</button>
+  <button id="demo9"  onclick="score1()" class="column">o</button>
+  <button id="demo10" onclick="score1()"  class="column">o</button>
+  <button id="demo11" onclick="score1()"  class="column">o</button>
+  <button id="demo12" onclick="score1()"  class="column">o</button>
+  <button id="demo13" onclick="score1()"  class="column">o</button>
+  <button id="demo14" onclick="score1()"  class="column">o</button>
+  <button id="demo15" onclick="score1()"  class="column">o</button>
+  <button id="demo16" onclick="score1()"  class="column">o</button>
+  <button id="demo17" onclick="score1()"  class="column">o</button>
+  <button id="demo18" onclick="score1()"  class="column">o</button>
+  <button id="demo19" onclick="score1()"  class="column">o</button>
+  <button id="demo20" onclick="score1()"  class="column">o</button>
+  <button id="demo21" onclick="score1()"  class="column">o</button>
+  <button id="demo22" onclick="score1()"  class="column">o</button>
+  <button id="demo23" onclick="score1()"  class="column">o</button>
+  <button id="demo24" onclick="score1()"  class="column">o</button>
+  <button id="demo25" onclick="score1()"  class="column">o</button>
+  <button id="demo26" onclick="score1()"  class="column">o</button>
+  <button id="demo27" onclick="score1()"  class="column">o</button>
+  <button id="demo28" onclick="score1()"  class="column">o</button>
+  <button id="demo29" onclick="score1()"  class="column">o</button>
+  <button id="demo30" onclick="score1()"  class="column">o</button>
+  <button id="demo31" onclick="score1()"  class="column">o</button>
+  <button id="demo32" onclick="score1()"  class="column">o</button>
+  <button id="demo33" onclick="score1()"  class="column">o</button>
+  <button id="demo34" onclick="score1()"  class="column">o</button>
+  <button id="demo35" onclick="score1()"  class="column">o</button>
+  <button id="demo36" onclick="score1()"  class="column">o</button>
+  <button id="demo37" onclick="score1()"  class="column">o</button>
+  <button id="demo38" onclick="score1()"  class="column">o</button>
+  <button id="demo39" onclick="score1()"  class="column">o</button>
+</div>
+</div>
+   <script>
+    var count=0;
+    function score1(){
+     if(o==='x'){
+      count++;
+     }
+     else{
+      count--;
+     }
+    }
+    let o;
+    let seconds=0;
+   function stopWatch(){ 
+    for(var i=0;i<40;i++){
+       o=document.getElementById("demo"+i).innerHTML =  random_item(items);
+       document.getElementById("score").innerHTML="Score :"+count;
+    }
+        seconds++;
+   document.getElementById("time").innerHTML="Time :"+seconds;
+   if(seconds>=10){
+    alert("Game over.Your score is "+count)
+    clearInterval(myVar);
+  }
+   }
+ 
+function random_item(items){
+return items[Math.floor(Math.random()*items.length)];     
+}
+var items = [0,'x'];
+   </script>
+</body>
+    <div>
+      <h3>How to play</h3>
+      <ul>
+        <li>The objective of the game is collect as many X as you can in 10 seconds.</li>
+        <li>Click on x to collect it</li>
+        <li>1 point per collected x</li>
+        <li>-1 point per wrong click</li>
+      </ul>
+    </div>
+    <div id="footer">
+      Made by your friend &copy; Vivek Singh.
+      <br><a href="linkedin.com/in/vivek-kumar-singh-5770b41b7">Follow me on linkedin</a>
+    </div>
+</html>
